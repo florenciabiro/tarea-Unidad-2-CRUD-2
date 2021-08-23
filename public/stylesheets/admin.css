@@ -1,0 +1,17 @@
+body{
+    background-color: aqua;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+header h1 {
+ position: static;
+}
+.holder{
+    width: 95%;
+}
+footer{
+  background-color: cornflowerblue;
+   
+}

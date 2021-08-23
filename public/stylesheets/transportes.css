@@ -1,0 +1,380 @@
+/* font-family: 'Open Sans', sans-serif; */
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+header{
+    background-color: #2e64a1;
+    padding: 1em 0;
+}
+header h1, img {  
+    color: white;
+    font-size: 2.5em;
+    font-style: italic;
+    font-weight: 100;   
+    display: inline-flex;
+    flex-direction: row; 
+}
+.homeimg img{
+   width: 100%;
+   margin: auto;}
+   
+
+header a{
+    font-style: italic;
+    font-weight: 100;
+    /* esto me pone el h en bloque en duda ?????????? */
+    display: inline-block;
+    position: static;
+}
+
+/* barra de navegacion */
+nav{
+    background-color: #6da9ed;
+    margin-bottom: 2em;
+    
+}
+/* saca el espacio de el lado de los puntos y saca los puntos  */
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* muestra los li que son linea en bloque  */
+nav ul li{
+    display: inline-block;
+    width: 13%;
+}
+/* saca el azul el ul  */
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    /* ocupa el ancho del padding trabajan juntos */
+    display: block;
+    padding: 0.2em 0.4em;
+}
+/* va pegado es sun error comun */
+nav ul li a:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* inicio del footer */
+footer{
+    background-color: #ccc;
+    clear: both;
+    color: #333;
+    padding: 3em 0;
+    margin-top: 2em;
+    text-align: center;
+}
+
+/*  este me detalla la solapa activa  */
+/* va pegado es sun error comun */
+nav ul li a.activo{
+    background-color: #4c76a5;
+}
+/* esat desfinido en el html  */
+.logo{
+    width: 2em;
+    position: static;
+}
+/* El ancho del contenido situado dentro de las etiquetas <header>, <nav> y <main>
+estará limitado por un div con la clase .holder */
+.holder{
+    
+    width: 80%;
+    margin: 0 auto;
+   
+}
+/* Armado de la sección Home........................ */
+h2{
+    color: #2e64a1;
+    font-weight: 400;
+    margin: 0 0 1em;
+}
+/* hago clases para uso rapido en cajas  */
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+/* definimos los estilos */
+/* inicio home */
+
+/* a veces se necesita un div contenedor de imagen !!!!! */
+.homeimg{
+    
+    margin-bottom: 1.5em;
+ 
+
+}
+.columnas{
+    overflow: hidden;
+    
+}
+/* para la utilizacion de padding y anchos */
+.bienvenidos, .testimonios{
+    box-sizing: border-box;
+}
+.bienvenidos{
+    width: 75%;
+    padding-right: 2em;
+
+}
+.testimonios{
+    width: 25%;
+    padding-right: 2em;
+}
+/* la cajita de adentro */
+.testimonio{
+    background-color: #ccc;
+    padding: 1em;
+
+}
+
+
+/* los span como es poco texto pongo etiquetas ne linea span  */
+.testimonio .cita{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.4em;
+
+    /* hace que un elemento en linea se muestre en bloque */
+    display: block;
+
+}
+.testimonio .autor{
+    font-size: 0.7em;
+    text-align: center;
+    margin: 1em 0;
+
+
+
+    display: block;
+}
+
+/* 3 armado de laseccion nosotros */
+/* inicio nosotros */
+.historia p{
+    font-size: 0.8em;
+}
+
+/* controla el excedente */
+
+/* como se armo flotando queda con un alto de cero y esto lo arregla */
+.personas{
+   /*  overflow: hidden; */
+
+
+   /* opcion con caja flex */
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+ 
+}
+.staff{
+    margin-bottom: 2em;
+}
+.persona{
+    width: 18%;
+    border: solid gray 1px;
+    border-radius: 0.25em;
+ 
+
+/* float o caja flex */
+    /* float: left; */
+
+
+    margin-left: 2.25%;
+    box-sizing: border-box;
+    }
+.persona{
+    text-align: center; /* esto me cestra tanto las fotos como las imagenes */
+
+}
+.persona img{
+    border-radius: 50%;
+    margin: 0.8em 0 1em;
+
+
+    max-width: 70%;
+    box-shadow: 5px 5px 5px black;
+}
+.persona h5, 
+.persona h6{
+    text-align: center;
+    font-weight: normal;
+    color: #2e64a1;
+    margin: 0;
+}
+.persona h5{
+    font-size: 0.9em;
+}
+.persona h6{
+    font-size: 0.8em;
+   font-style: italic;
+  
+}
+.persona p{
+    font-size: 0.7em;
+    color:#444;
+    margin: 0 1em 1em;
+}
+
+/* tienen que esatr los hijos co div adentro de una caja  */
+.persona:first-child{
+    margin-left: 0;
+}
+/* fin nosotros  */
+
+
+
+
+/* seccion servicios */
+.servicio{
+    border: gray solid 1px;
+    border-radius: 0.7em;
+    margin: 1em 0;
+    padding: 1em;
+
+    /* porque lo voy a hacer con flotar */
+    overflow: hidden;
+}
+.servicio .info{
+    width: 75%;
+}
+.servicio .info h4{
+    color: #031122;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 500;
+    margin: 0 0 1em;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 0.5em;
+}
+.servicio .info p{
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+
+.servicio img{
+    border-radius: 0.8em;
+}
+
+/* zigzag de fotos */
+.servicio:nth-child(even) .info{/* par */
+    float: right;
+   
+}
+.servicio:nth-child(even) img{
+    float: left;
+    margin: 0 0 0 1em;
+}
+.servicio:nth-child(odd) .info{/* par */
+    float: left;
+   
+}
+.servicio:nth-child(odd) img{
+    float: right;
+    margin: 0  1em 0 0 ;
+}
+
+/*  */
+
+/* inicio GALERIA */
+/* calculo de columnas  */
+.galeria .foto{
+    float: left;
+    width: 18%;
+    margin:  1em 0 1em 2.5%;
+    border: 1px solid #ddd;
+    padding: 0.3em;
+    box-sizing: border-box;
+}
+/* ajuste de la imagen proporcional al elemento */
+.galeria .foto img{
+    width: 100%;
+    display: block;
+}
+/* cada 5 hijos le saca el margen de 5 hijos el 5 sube  */
+.galeria .foto:nth-child(5n+1 ){
+    margin-left: 0;
+    border-color: red;
+}
+/* elementos destacados */
+.galeria .foto:nth-child(3){
+    background-color: yellow;
+}
+
+/*  inicio formulario contacto */
+/* ubucacaion de elementos principales  */
+.columna{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0.6em;
+    margin: auto;
+}
+.columna.left {
+    border-right: 1px solid gray;
+}
+
+.columna.right p{
+    font-size: 0.9em;
+}
+.columna.right ul li{
+    font-size: 0.8em;
+}
+
+
+/* formulario ppmt dicho */
+.formulario label{
+    vertical-align: top;
+    width: 50%;
+    display: inline-block;
+    /* background-color: yellow; */
+ /*    text-align: left; */
+}
+/* manejando los anchos del input y del label hago que los elementos me queden uno  abajo del otro de modo casero  */
+
+
+
+.formulario input,
+.formulario textarea{
+    background-color: #ddd;
+    border-radius: 5px;
+    border: solid 1px #999;
+    padding: 0.4em 0.6em;
+    font-size:0.8em;
+    width: 70%;
+}
+
+/* con rezise none bloqueo el movimiento del box */
+.formulario textarea{
+    height: 10em;
+   /*  resize: none; */
+}
+
+
+/*  declarando le type del input modifico solo este. esto es nuevo del html 5  */
+.formulario input[type="submit"]{
+    background-color: #6da9ed;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    width: auto;
+    cursor: pointer;
+
+}
+
+
+.formulario .acciones{
+    text-align: center;
+}
+
+.agregar{
+    margin: auto;
+}

@@ -1,0 +1,19 @@
+<main class="holder" >
+    <h2 style="text-align: center;">Novedades</h2>
+    <!-- paquite 1  -->
+
+<h1> Ya visitaste esta pagina {{vistas}} veces ... <br> <br> Queres estar al dia con las Novedades ??  </h1>
+<h2>Suscribite para ser el primero en enterarte !!</h2>
+
+    {{#each novedades}}
+    <div class="novedades">
+        <h3 style="border-radius:20px ;background-color:aqua ; height:2em ; padding:0.5em  "  >{{titulo}}</h3>
+        <h4 style="padding:0.5em;background-color:rgba(238, 190, 101, 0.671) ;">{{{subtitulo}}}</h4>
+        <p >{{{cuerpo}}}</p>
+        <hr>
+    </div>
+
+    {{/each}}
+</main>
+
+<br>

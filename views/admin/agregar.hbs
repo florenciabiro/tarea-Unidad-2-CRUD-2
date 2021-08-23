@@ -1,0 +1,49 @@
+<section class="margen holder ">
+    <!-- formulario de contacto -->
+    <div class="row  justify-content-between  ">
+        <div class="col-sm-12 col-lg-8 agregar ">
+            <div class=" contacto-1  opaco espacio margen border ">
+                {{!-- <div class="col-12 col-lg-6 contacto-1 opaco"> --}}
+                    <h4>Agregar una nueva novedad</h4>
+                    <form action="/admin/novedades/agregar" method="post" class="formulario  ">
+                       
+                        <p>
+                            <label class="form-label" >Titulo</label>
+                            <input class="form-control" type="text" name="titulo"  placeholder="Titulo">
+                        </p>
+                        <p>
+                            <label class="form-label" >Subtitulo</label>
+                            <input class="form-control" type="text" name="subtitulo" placeholder="subtitulo">
+                        </p>
+                        <p>
+                            <label class="form-label" for="email">Cuerpo</label>
+                            <textarea class="form-control" type="text-area" name="cuerpo" placeholder="cuerpo" 
+                               ></textarea>
+                        </p>
+
+
+
+                        <div class="botones-contacto ">
+                            <button class="btn btn-reset col-12 col-lg-5" type="reset">Limpiar <i
+                                    class="fas fa-edit"></i>
+                            </button><button class="btn btn-contacto col-12 col-lg-5" type="submit"> Enviar <i
+                                    class="fas fa-envelope-open-text"></i></button>
+
+                        </div>
+
+
+
+
+                    </form>
+                    {{#if error}}
+                    <p>{{message}}</p>
+                    {{!-- <p class="mensaje-error"> Los datos ingresados son <span style="color: red;"> Incorrectos </span>
+                    </p> --}}
+                    {{/if}}
+                    {{!-- <div class="botones-contacto "><button class="btn btn-volver" type="reset"><a href="/"> <i
+                                    class="fas fa-mug-hot"></i>Volver al Home
+                                <i class="fas fa-mug-hot"></i></a> </button></div>
+                </div> --}}
+
+            </div>
+</section>

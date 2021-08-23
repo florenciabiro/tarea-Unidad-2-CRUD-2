@@ -1,0 +1,89 @@
+<div class="holder" style="margin : 50px auto">
+
+       <p class="text-end"> Hola {{usuario}} ! <br>Bienvenido al Administrdor de Novedades <br><a href="/admin/login/logout" class=" btn btn-sm btn-danger">Cerrar
+                sesion <i class="fas fa-sign-out-alt"></i></a> </p>
+
+   
+   <hr>
+
+    <div class="row">
+        <div class="col-8" style="margin: top -9px;">
+            <h2>Listado de Novedades</h2>
+            <p>Estaran listadas las Ultimas 10 novedades por fecha para su administracion desde aquí. </p>
+        </div>
+    
+    
+        <div class="col-4 text-end">
+            <a href="/admin/novedades/agregar" class="btn btn-success"> <i class="fas fa-plus"></i>Nuevo</a>
+    
+        </div>
+    
+    </div>
+
+
+  
+
+
+
+<div class="row">
+    <div class="col">
+        <table id="fondo" class="table novedades-admin">
+            <thead>
+                <tr class="table" >
+                    <th scope="col">Id</th>
+                  
+                     <th scope="col">Titulo</th>
+                     <th scope="col">Subtitulo</th>
+                      <th scope="col">Cuerpo</th>
+                      <th scope="col" class="text-end">Acciones</th>
+                </tr>
+            </thead>
+      
+        <tbody>
+            {{#each novedades}}
+           {{!-- inicio fila de tabla , una sola porque se va a repetir con un bucle  --}}
+            <tr class="listado">
+                <th scope="row">{{{id}}}</th>
+               
+                <td>{{{titulo}}}</td>
+                <td  >{{{subtitulo}}}</td>
+                 <td  >{{{cuerpo}}}</td>
+                <td class="text-end">
+                    <a href="/admin/novedades/modificar/{{id}}" class="btn btn-sm"><i style="color :rgb(8, 102, 102) " class="fas fa-pencil-alt"></i></a>
+
+                    <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-sm ">
+                <i style="color:crimson " class="fas fa-trash-alt"></i></a>
+                
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+          </table>
+    </div>
+</div>
+ 
+ 
+</div>
+<script>
+       var blanco = document.getElementById('blanco');
+       var negro = document.getElementById('negro');
+       var azul=document.getElementById('azul')
+      
+    blanco.addEventListener('click', function(){
+        fondo.style.backgroundColor = ' rgb(245, 222, 179)';
+         fondo.style.color = 'black';
+         fondo.style.weight = 'bold'; 
+    });
+
+    negro.addEventListener('click', function(){
+        fondo.style.backgroundColor = 'rgba(0, 0, 0, 0.527)';
+         fondo.style.color = 'aqua';
+    });
+    azul.addEventListener('click', function(){
+        fondo.style.backgroundColor = 'rgb(2, 23, 63)' ;
+        fondo.style.color =  ' rgb(245, 222, 179)';
+      
+    });
+          
+</script>
+{{!--  --}} 

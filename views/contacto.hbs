@@ -1,0 +1,52 @@
+ <main class="columna">
+    <!-- columna flotadora a la izq  -->
+    <div class="columna left">
+        <h2>Contacto Rápido</h2>
+        <form action="/contacto" method="post" class="formulario">
+            <p>
+                <label for="Nombre">Nombre</label>
+                <input type="text" name="nombre">
+            </p>
+            <p>
+                <label for="">Email</label>
+                <input type="text" name="email">
+            </p>
+            <p>
+                <label for="">Telefono</label>
+                <input type="text" name="tel">
+            </p>
+            <p>
+                <label for="">Mensaje</label>
+               <textarea name="mensaje" ></textarea>
+            </p>
+            <!-- el boton lo metio en una p porque esat en bloque  -->
+            <p class="acciones"> <input type="submit" value="enviar"></p>
+
+        </form>
+        {{!-- aca con elemeto p le doy estilos al mensaje ! --}}
+        <p>
+            {{{message}}}
+        </p>
+    </div>
+
+    <!-- columna flotadora a la derecha  -->
+    <div class="columa right">
+        <h2>Otras vias de contacto</h2>
+        <p>Tambien se pueden comunicar con nosotros ....</p>
+        <ul>
+            <li>Telefono: 1234-4567</li>
+            <li>Email:contacto@transportesX.com.ar</li>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <Li>Skipe</Li>
+        </ul>
+    </div>
+
+</main>
+
+<script>
+    if (window.history.replaceState) { // verificamos disponibilidad
+    window.history.replaceState(null, null, window.location.href);
+}
+
+</script>
